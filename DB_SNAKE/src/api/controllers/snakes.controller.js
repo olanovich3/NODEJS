@@ -7,7 +7,7 @@ const getAllSnakes = async (req, res, next) => {
       const numSnakes = await Snake.countDocuments();
 
       let page = parseInt(req.query.page);
-      //Vamos a indicarle el limite de elementos y si no está indicado que sea 10 por defecto
+
       let limit = req.query.limit ? parseInt(req.query.limit) : 10;
 
       let numPages =
